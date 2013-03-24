@@ -34,10 +34,3 @@ $s = q|select sum(watts) as watts, sum(watts) / 1000 * 0.1617 as cost, convert(v
 
 my $r = $h->selectall_arrayref($s);
 print Dumper($r);
-
-
-#  FROM [master].[dbo].[home_electricity]
-#  group by convert(varchar(10), dateadd(ss,unixtime,'1970-01-01'), 103)
-#SELECT TOP 1000 dateadd(ss,unixtime,'1970-01-01')
-#      ,watts
-#  FROM [master].[dbo].[home_electricity]
